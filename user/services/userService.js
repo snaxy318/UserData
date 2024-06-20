@@ -2,7 +2,7 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/userModel');
 const UserCredential = require('../models/userCredentialModel');
-const sequelize = require('../config/database');
+const sequelize = require('../../config/database');
 
 
 const getAllUsers = async () => {

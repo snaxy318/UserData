@@ -1,6 +1,6 @@
 // userModel.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../../config/database');
 const UserType = require('./userTypeModel');
 const UserCredential = require('./userCredentialModel');
 

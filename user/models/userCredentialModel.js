@@ -1,6 +1,6 @@
 // userCredentialModel.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../../config/database');
 const User = require('./userModel');
 
 const UserCredential = sequelize.define('usercredential', {
