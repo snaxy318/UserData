@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const userRoutes = require('./user/routes/userRoutes');
 const roleRoutes = require('./roles/./routes/roleRoutes');
-const featureRoutes = require('./routes/featureRoutes');
+const featureRoutes = require('./features/routes/featureRoutes');
 const sequelize = require('./config/database');
 
 const app = express();
