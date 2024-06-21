@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./user/routes/userRoutes');
 const roleRoutes = require('./roles/./routes/roleRoutes');
 const featureRoutes = require('./features/routes/featureRoutes');
+const userRoleMapperRoutes = require('./roles/routes/userRoleMapperRoutes');
 const sequelize = require('./config/database');
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 app.use('/api/users', userRoutes);
 app.use('/api/roles', roleRoutes);
 app.use('/api/features', featureRoutes);
+app.use('/api', userRoleMapperRoutes); 
 
 // Error handling middleware
 app.use((err, req, res, next) => {
