@@ -4,6 +4,7 @@ const userRoutes = require('./user/routes/userRoutes');
 const roleRoutes = require('./roles/./routes/roleRoutes');
 const featureRoutes = require('./features/routes/featureRoutes');
 const userRoleMapperRoutes = require('./roles/routes/userRoleMapperRoutes');
+const featureRoleMapperRoutes = require('./features/routes/featureRoleMappingRoutes');
 const sequelize = require('./config/database');
 
 const app = express();
@@ -17,6 +18,8 @@ app.use('/api/users', userRoutes);
 app.use('/api/roles', roleRoutes);
 app.use('/api/features', featureRoutes);
 app.use('/api', userRoleMapperRoutes); 
+app.use('/api', featureRoleMapperRoutes);
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {

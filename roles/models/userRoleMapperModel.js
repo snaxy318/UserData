@@ -10,20 +10,28 @@ const UserRoleMapper = sequelize.define('userrolemapper', {
   },
   userid: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: false,
+    unique: {
+      name: 'compositeIndex',
+      msg: 'User and Role combination must be unique'
+    }
   },
   roleid: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: false,
+    unique: {
+      name: 'compositeIndex',
+      msg: 'User and Role combination must be unique'
+    }
   }
 },{
-  timestamps: false,
-  indexes: [
-    {
-      unique: true,
-      fields: ['userid', 'roleid']
-    }
-  ]
+  timestamps: false
+  // indexes: [
+  //   {
+  //     unique: true,
+  //     fields: ['userid', 'roleid']
+  //   }
+  // ]
 });
 
 module.exports = UserRoleMapper;
