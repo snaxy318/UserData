@@ -1,6 +1,6 @@
 // featureRoleMappingModel.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../../config/database');
 
 const FeatureRoleMapping = sequelize.define('FeatureRoleMapping', {
   featureRoleMappingId: {
