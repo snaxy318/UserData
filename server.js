@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const userRoutes = require('./user/routes/userRoutes');
 const roleRoutes = require('./roles/./routes/roleRoutes');
 const featureRoutes = require('./features/routes/featureRoutes');
@@ -12,6 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
+app.use(cors());
 
 // Routes
 app.use('/api/users', userRoutes);
